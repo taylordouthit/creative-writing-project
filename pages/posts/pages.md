@@ -1,9 +1,9 @@
 ---
-title: Next.js Pages
-date: 2021/3/18
-description: Learn more about Next.js pages.
-tag: web development
-author: You
+title: The Great Beyond
+date: 2022/9/15
+description: This is a description.
+tag: AI, Space, Science
+author: Taylor Douthit
 ---
 
 # Next.js Pages
