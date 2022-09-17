@@ -23,6 +23,16 @@ export default function Document() {
         <meta name="twitter:image" content={meta.image} />
       </Head>
       <body>
+        <div class="ufo-container">
+          <div class="ufo">
+            <img class="saucer" src="/images/ufo.png" />
+            <div id="r1" class="tractor-beam"></div>
+            <div id="r2" class="tractor-beam"></div>
+            <div id="r3" class="tractor-beam"></div>
+            <div id="r4" class="tractor-beam"></div>
+            <div id="r5" class="tractor-beam"></div>
+          </div>
+        </div>
         <Main />
         <NextScript />
       </body>

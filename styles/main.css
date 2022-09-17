@@ -1,3 +1,16 @@
+html,
+body {
+  height: 100%;
+  width: 100%;
+  /*Cyberpunk theme */
+  --dark-purple: #1b163f;
+  --pink: #c511b7;
+  --teal: #31d1d7;
+  --mid-purple: #4e1e96;
+  --light-purple: #6221c9;
+  --scaleY: 0.35;
+}
+
 @font-face {
   font-family: 'Inter var';
   font-style: normal;
@@ -62,4 +75,129 @@ img.next-image {
 
 .nav-line .nav-link {
   color: #69778c;
+}
+
+@keyframes fly {
+  from {
+    rotate: 10deg;
+    left: 0%;
+  }
+  to {
+    rotate: -10deg;
+    left: 91%;
+  }
+}
+
+@keyframes shoot {
+  0% {
+    transform: scaleY(var(--scaleY)) scale(1.02, 1);
+    opacity: 0.1;
+  }
+  10% {
+    transform: scaleY(var(--scaleY)) scale(1.04, 1);
+  }
+  20% {
+    transform: scaleY(var(--scaleY)) scale(1.06, 1);
+  }
+  30% {
+    transform: scaleY(var(--scaleY)) scale(1.08, 1);
+  }
+  40% {
+    transform: scaleY(var(--scaleY)) scale(1.1, 1);
+  }
+  50% {
+    transform: scaleY(var(--scaleY)) scale(1.12, 1);
+    opacity: 1;
+  }
+  60% {
+    transform: scaleY(var(--scaleY)) scale(1.14, 1);
+  }
+  70% {
+    transform: scaleY(var(--scaleY)) scale(1.16, 1);
+  }
+  80% {
+    transform: scaleY(var(--scaleY)) scale(1.18, 1);
+  }
+  90% {
+    transform: scaleY(var(--scaleY)) scale(1.2, 1);
+  }
+  100% {
+    transform: scaleY(var(--scaleY)) scale(1.22, 1);
+    opacity: 0;
+  }
+}
+
+.ufo-container {
+  width: 100%;
+}
+
+.ufo {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  animation-name: fly;
+  animation-duration: 6s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  z-index: 1;
+}
+
+.ufo:hover {
+  cursor: pointer;
+  animation-play-state: paused;
+}
+
+.saucer {
+  position: absolute;
+  width: 80px;
+  z-index: 2;
+}
+
+.tractor-beam {
+  visibility: hidden;
+  border-radius: 50%;
+  position: absolute;
+  background-color: transparent;
+  border: 5px var(--dark-purple) solid;
+  animation: shoot;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease;
+  animation-duration: 0.3s;
+}
+
+#r1 {
+  top: 74%;
+  left: 37%;
+  width: 20px;
+  height: 20px;
+}
+
+#r2 {
+  top: 85%;
+  left: 35%;
+  width: 25px;
+  height: 25px;
+}
+#r3 {
+  top: 98%;
+  left: 32%;
+  width: 30px;
+  height: 30px;
+}
+#r4 {
+  top: 115%;
+  left: 30%;
+  width: 35px;
+  height: 35px;
+}
+#r5 {
+  top: 131%;
+  left: 28%;
+  width: 40px;
+  height: 40px;
+}
+
+.ufo:hover > .tractor-beam {
+  visibility: visible;
 }
