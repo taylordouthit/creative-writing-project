@@ -9,6 +9,7 @@ body {
   --mid-purple: #4e1e96;
   --light-purple: #6221c9;
   --scaleY: 0.35;
+  overflow-x: hidden;
 }
 
 @font-face {
@@ -159,7 +160,7 @@ img.next-image {
   border-radius: 50%;
   position: absolute;
   background-color: transparent;
-  border: 5px var(--dark-purple) solid;
+  border: 5px var(--light-purple) solid;
   animation: shoot;
   animation-iteration-count: infinite;
   animation-timing-function: ease;
