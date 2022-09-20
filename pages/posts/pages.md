@@ -8,4 +8,13 @@ author: Taylor Douthit
 
 # The Great Beyond
 
-Sup dood
+import Image from 'next/image'
+
+<Image
+  src="/images/campfire.png"
+  alt="Photo"
+  width={1664}
+  height={1664}
+  priority
+  className="next-image"
+/>

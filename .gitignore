@@ -8,6 +8,9 @@
 # testing
 /coverage
 
+# drafts and unfinished pages
+/drafts
+
 # next.js
 /.next/
 /out/
